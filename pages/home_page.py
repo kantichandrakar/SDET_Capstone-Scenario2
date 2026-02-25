@@ -22,6 +22,7 @@ class HomePage:
             EC.visibility_of_element_located(self.download_extend)
         )
         actions.move_to_element(download).perform()
+        download.click()
 
         themes = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(self.themes_option)
